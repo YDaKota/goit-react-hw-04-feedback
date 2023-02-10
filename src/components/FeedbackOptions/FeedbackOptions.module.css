@@ -1,0 +1,33 @@
+.feedbackOptions {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: flex-start;
+    padding-top: 0;
+    margin: 0;
+}
+.button {
+    padding: auto;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 25px;
+    border: none;
+}
+
+.good {
+    composes: button;
+    background: linear-gradient(#4bb54b, #5cd384);
+    color: white;
+}
+
+.neutral {
+    composes: button;
+    background: linear-gradient(beige, rgb(189, 189, 134));
+}
+
+.bad {
+    composes: button;
+    background: linear-gradient(rgb(194, 96, 79), rgb(219, 132, 116));
+    color: white;
+}
