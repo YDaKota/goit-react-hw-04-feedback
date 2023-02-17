@@ -9,11 +9,7 @@ export const Statistic = ({ good, neutral, bad, total, positivePercentage}) => {
             <p className={style.text}>Neutral: {neutral}</p>
             <p className={style.text}>Bad: {bad}</p>
             <p className={style.text}>TotalFeedback: {total}</p>
-            { positivePercentage ? (
-                <p className={style.text}>Positive feedback {positivePercentage}%</p>
-                ) : (
-                <p className={style.text}>Positive feedback: 0</p>
-            )}
+            <p className={style.text}>Positive feedback: {positivePercentage}%</p>
         </div>
     )
 }

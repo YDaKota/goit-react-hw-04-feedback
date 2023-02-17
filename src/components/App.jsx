@@ -42,19 +42,20 @@ export const App = () => {
             onLeaveFeedback={onLeaveFeedback}
           />
         </Section>
+
         <Section title="Statistics">
-          {countTotalFeedback() ? (
-            <Statistic
-              good={good}
-              neutral={neutral}
-              bad={bad}
-              total={countTotalFeedback()}
-              positivePercentage={countPositiveFeedbackPercentage()}
-            />
+        {countTotalFeedback() === 0 ? (
+          <Notification message="There is no feedback" />
           ) : (
-            <Notification message="There is no feedback"/>
-          )}
-        </Section>
+          <Statistic
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={countTotalFeedback()}
+            positivePercentage={countPositiveFeedbackPercentage()}
+          />
+        )}
+      </Section>
       </div>
     );
   };
